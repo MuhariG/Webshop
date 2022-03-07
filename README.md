@@ -1,4 +1,4 @@
-# Webshop
+# Webshop - Java web
 Java web application with JSF framework, using hibernate XML mappings.
 
 ![275146661_279193974359474_8499987921497525410_n](https://user-images.githubusercontent.com/99958623/157039992-28f4b869-38d6-45ee-9555-730a96efb116.png)
