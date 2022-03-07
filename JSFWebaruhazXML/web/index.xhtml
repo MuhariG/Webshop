@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Albumok</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandLink value="Kosár megjelenítése (#{kosar.osszDarabszam} db termék)" action="kosar" /> <br/>
+            <h:dataTable value="#{listazo.cdLista}" var="cd">
+                <h:column>
+                    <f:facet name="header">
+                        Előadó
+                    </f:facet>
+                    #{cd.artist}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        Album
+                    </f:facet>
+                    #{cd.title}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        Kiadó
+                    </f:facet>
+                    #{cd.company} - #{cd.country}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        Ár
+                    </f:facet>
+                    #{cd.price}
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">
+                        Vásárlás
+                    </f:facet>
+                    <h:commandButton value="kosárba" action="#{kosar.hozzaad(cd)}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>
+
